@@ -1,0 +1,31 @@
+on: [push]
+name: Rins CI
+jobs:
+  build_and_test:
+    name: Rins CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release
+      - uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- -v
+      - uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- -h
+      - uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- --version
+      - uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: -- --help

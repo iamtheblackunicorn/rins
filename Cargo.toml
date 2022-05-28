@@ -1,0 +1,27 @@
+[package]
+name = "rins"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+authors = ["Alexander Abraham <youreccentricity@outlook.com>"]
+description= "A small server to serve a directory locally."
+homepage = "https://github.com/iamtheblackunicorn/rins"
+repository = "https://github.com/iamtheblackunicorn/rins"
+documentation = "https://github.com/iamtheblackunicorn/rins"
+readme = "README.markdown"
+keywords = [
+  "cli",
+  "server"
+]
+categories = [
+  "command-line-utilities"
+]
+exclude = [
+  "scripts",
+  "/.github"
+]
+
+[dependencies]
+cleasy = "1.0.0"
+colored = "2.0.0"
+file-serve = "0.1.1"
